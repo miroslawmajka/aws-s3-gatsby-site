@@ -3,6 +3,7 @@
   "private": true,
   "description": "",
   "version": "1.0.0",
+  "author": "Miroslaw Majka",
   "license": "MIT",
   "scripts": {
     "build": "gatsby build",
@@ -11,12 +12,14 @@
     "start": "npm run develop",
     "serve": "gatsby serve",
     "clean": "gatsby clean",
-    "reserve": "npm run clean && npm run build && npm run serve",
-    "deploy": "sls deploy",
+    "clean-build": "npm run clean && npm run build",
+    "preview": "npm run clean-build && npm run serve",
+    "deploy": "npm run clean-build && sls deploy",
     "remove": "sls remove"
   },
   "dependencies": {
     "@apollo/client": "^3.2.2",
+    "dotenv": "^8.2.0",
     "gatsby": "^2.24.67",
     "gatsby-plugin-apollo": "^3.0.1",
     "gatsby-plugin-typescript": "^2.4.21",

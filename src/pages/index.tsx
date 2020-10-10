@@ -5,11 +5,12 @@ import {
   ApolloClient,
   InMemoryCache,
   useQuery,
-  gql
+  gql,
+  UriFunction
 } from '@apollo/client';
 
 const client = new ApolloClient({
-  uri: 'https://vkcnm7r1rh.execute-api.eu-west-1.amazonaws.com/dev/graphql', // TODO: inject this in a pipeline
+  uri: process.env.GATSBY_APOLLO_URL, // Needs to be prefixed with "GATSBY_" to use here
   cache: new InMemoryCache()
 });
 

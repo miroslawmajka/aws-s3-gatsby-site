@@ -1,5 +1,4 @@
 {
-  "compileOnSave": true,
   "compilerOptions": {
     "sourceRoot": "src",
     "outDir": "dist",
