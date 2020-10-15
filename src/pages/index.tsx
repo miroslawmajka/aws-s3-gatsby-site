@@ -6,12 +6,12 @@ import {
   InMemoryCache,
   useQuery,
   gql,
-  UriFunction
+  UriFunction,
 } from '@apollo/client';
 
 const client = new ApolloClient({
   uri: process.env.GATSBY_APOLLO_URL, // Needs to be prefixed with "GATSBY_" to use here
-  cache: new InMemoryCache()
+  cache: new InMemoryCache(),
 });
 
 const GRAPHQL_QUERY = gql`
