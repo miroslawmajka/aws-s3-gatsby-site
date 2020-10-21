@@ -47,8 +47,20 @@ resources:
                     "/*"
                   ]
                 ]
-
   Outputs:
     StaticSiteS3BucketName:
+      Description: "Name of site S3 bucket"
       Value:
-        Ref: StaticSite             
+        'Ref': StaticSite
+      Export:
+        Name: "${self:service}-StaticSiteS3BucketName"
+
+    StaticSiteS3BucketWebsiteURL:
+      Description: "Website URL using Route53 record"
+      Value:
+        Fn::Join:
+          - ''
+          - - 'http://'
+            - Ref: StaticSite
+      Export:
+        Name: "${self:service}-StaticSiteS3BucketWebsiteURL"

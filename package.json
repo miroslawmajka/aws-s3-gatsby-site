@@ -18,19 +18,19 @@
     "remove": "sls remove"
   },
   "dependencies": {
-    "@apollo/client": "^3.2.4",
+    "@apollo/client": "^3.2.5",
     "dotenv": "^8.2.0",
-    "gatsby": "^2.24.78",
+    "gatsby": "^2.24.84",
     "gatsby-plugin-apollo": "^3.0.1",
-    "gatsby-plugin-typescript": "^2.4.22",
+    "gatsby-plugin-typescript": "^2.4.24",
     "react": "^16.14.0",
     "react-dom": "^16.14.0"
   },
   "devDependencies": {
-    "@types/react": "^16.9.52",
+    "@types/react": "^16.9.53",
     "@types/react-dom": "^16.9.8",
     "prettier": "2.1.2",
-    "serverless": "^2.7.0",
+    "serverless": "^2.8.0",
     "serverless-s3-sync": "^1.15.0",
     "typescript": "^4.0.3"
   },
